@@ -1,0 +1,37 @@
+
+@import "compass/reset";
+/* General Demo Style */
+
+body {
+  background: #e6eecc;
+  color: #333;
+  font-family: 'Heiti TC','Microsoft JhengHei',微軟正黑體, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+.container {
+  position: relative;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0px;
+  padding: 20px;
+  font-size: 32px;
+  color: #000;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9);
+  text-align: center;
+  font-weight: 400;
+  span {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+    font-family: Georgia, serif;
+    padding-top: 5px;
+  }
+}
