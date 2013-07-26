@@ -1,5 +1,7 @@
 
 @import "compass/reset";
+@import "compass/css3";
+
 /* General Demo Style */
 
 body {
@@ -35,3 +37,5 @@ h1 {
     padding-top: 5px;
   }
 }
+
+@import "style_01";
