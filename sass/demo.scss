@@ -2,6 +2,18 @@
 @import "compass/reset";
 @import "compass/css3";
 
+@mixin animation($name) {
+  -webkit-animation: $name;
+  -moz-animation: $name;
+  -ms-animation: $name;
+  //animation: $name;
+}
+@mixin keyframes($name) {
+  @-webkit-keyframes $name { @content; }
+  @-moz-keyframes $name { @content; }
+  @-ms-keyframes $name { @content; }
+}
+
 /* General Demo Style */
 
 body {
@@ -38,4 +50,185 @@ h1 {
   }
 }
 
-@import "style_01";
+@font-face {
+  font-family: 'WebSymbolsRegular';
+  src: url('websymbols/websymbols-regular-webfont.eot');
+  src: url('websymbols/websymbols-regular-webfont.eot?#iefix') format("embedded-opentype"),
+  url('websymbols/websymbols-regular-webfont.woff') format("woff"),
+  url('websymbols/websymbols-regular-webfont.ttf') format("truetype"),
+  url('websymbols/websymbols-regular-webfont.svg#WebSymbolsRegular') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.demo1 {
+  @import "style_01";
+}
+
+.demo2 {
+  @import "style_02";
+}
+
+@include keyframes(moveFromBottom02) {
+  from {
+    @include transform(translateY(200%));
+    opacity: 0;
+  }
+  to {
+    @include transform(translateY(0%));
+    opacity: 1;
+  }
+}
+
+@include keyframes(moveFromTop02) {
+  from {
+    @include transform(translateY(-200%));
+    opacity: 0;
+  }
+  to {
+    @include transform(translateY(0%));
+    opacity: 1;
+  }
+}
+
+.demo3 {
+  @import "style_03";
+}
+
+.demo4 {
+  @import "style_04";
+}
+
+@include keyframes(moveFromBottom04) {
+  from {
+    @include transform(translateY(200%));
+  }
+  to {
+    @include transform(translateY(0%));
+  }
+}
+
+@include keyframes(moveFromTop04) {
+  from {
+    @include transform(translateY(-300%));
+  }
+  to {
+    @include transform(translateY(0%));
+  }
+}
+
+.demo5 {
+  @import "style_05";
+}
+
+@include keyframes(FromLeft05) {
+  from {
+    @include transform(translateX(-100%));
+  }
+  to {
+    @include transform(translateX(0%));
+  }
+}
+
+@include keyframes(moveFromRight05) {
+  from {
+    @include transform(translateX(100%));
+  }
+  to {
+    @include transform(translateX(0%));
+  }
+}
+
+@include keyframes(moveFromBottom05) {
+  from {
+    @include transform(translateY(100%));
+    opacity: 0;
+  }
+  to {
+    @include transform(translateY(0%));
+    opacity: 1;
+  }
+}
+
+.demo6 {
+  @import "style_06";
+}
+
+@include keyframes(moveFromLeftRotate06) {
+  from {
+    @include transform(translateX(-100%) rotate(-90deg));
+  }
+  to {
+    @include transform(translateX(0%));
+  }
+}
+
+@include keyframes(moveFromBottom06) {
+  from {
+    @include transform(translateY(100%));
+  }
+  to {
+    @include transform(translateY(0%));
+  }
+}
+
+.demo7 {
+  @import "style_07";
+}
+
+@include keyframes(smallToBig07) {
+  from {
+    @include transform(scale(0.1));
+  }
+  to {
+    @include transform(scale(1));
+  }
+}
+
+@include keyframes(moveFromBottom07) {
+  from {
+    @include transform(translateY(100%));
+  }
+  to {
+    @include transform(translateY(0%));
+  }
+}
+
+.demo8 {
+  @import "style_08";
+}
+
+@include keyframes(smallToBig08) {
+  from {
+    @include transform(scale(0.1));
+  }
+  to {
+    @include transform(scale(1));
+  }
+}
+
+@include keyframes(moveFromBottom08) {
+  from {
+    @include transform(translateY(100%));
+  }
+  to {
+    @include transform(translateY(0%));
+  }
+}
+
+.demo9 {
+  @import "style_09";
+}
+
+.demo10 {
+  @import "style_10";
+}
+
+@include keyframes(moveFromBottom10) {
+  from {
+    @include transform(translateY(200%) scale(0.5));
+  }
+  to {
+    @include transform(translateY(0%) scale(1));
+  }
+}
